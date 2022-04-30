@@ -6,7 +6,7 @@ const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const User = require("./models/User");
-const productModel = require("./models/Product");
+const productModel = require("./models/product");
 const bcrypt = require("bcryptjs");
 const {
   checkAuthenticated,
@@ -129,4 +129,4 @@ db.on('error', (error) => console.error(error))
 db.once('open',() => console.log('Connected to Database'))
 
 app.use(express.static('public'));
-app.listen(3000, () => console.log('Server Started'))
+app.listen(3300, () => console.log('Server Started'))
