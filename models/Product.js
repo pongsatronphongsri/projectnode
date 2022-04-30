@@ -1,23 +1,33 @@
-const mongoose = require("mongoose");
+const mongoose=require("mongoose")
+const Reviews=require("./reviews")
+const productSchema=new mongoose.Schema({
+    name:{
+        type:String
+    },
+    img:{
+        type:String
+    },
+    image:{
+        data :Buffer,
+        contentType:String
+    },
+    price:{
+        type:Number,
+        min:0,
+        required:true
+    },
+    desc:{
+        type:String
+    },
+    reviews:[
+        {
+            type:mongoose.ObjectId,
+            ref:"reviews"
+        },
+    ]
+        
+    
 
-const productSchema = new mongoose.Schema({
-    imge: {
-        type: String,
-        required: true,
-    },
-    nameProduct: {
-        type: String,
-        required: true,
-    },
-    price: {
-        type: Number,
-        required: true,
-    },
-    details: {
-        type: String,
-        required: true,
-    }
-});
-
-const productModel = mongoose.model("productModel", productSchema);
-module.exports = productModel;
+})
+const Product=new mongoose.model("products",productSchema)
+module.exports=Product;
