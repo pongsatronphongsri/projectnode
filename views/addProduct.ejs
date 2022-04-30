@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>add book</title>
+</head>
+<body>
+    <div id="app">
+        <form action="/logout?_method=DELETE" method="post">
+            <a href="/"><img :src="icon" class="img02"></a>
+            <a href="/"><img :src="Book" class="imgBook" style="width:3.5%"></a>
+            <a href="/buy"><img :src="shopping" class="img03" align="right" style="width:2%"></a>
+            <button type="submit" class="button2" style="float:right;">LOGOUT</button>
+        </form>
+    </div>
+        <div class="main">
+        <h1>Add product</h1>
+        <% if (messages) { %>
+            <p><%= messages.error %></p>
+        <% } %>
+        <form action="/addProduct" method="POST">
+            <input type="File" name="imageProduct" placeholder="Enter product image" />
+            <input type="nameProduct" name="nameProduct" placeholder="Enter product name" />
+            <input type="price" name="price" placeholder="Enter product price" />
+            <input type="details" name="details" placeholder="Enter product details" />
+            <button>Enter</button>
+        </form>
+            </div>
+    <script src = "main.js"></script>
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+</html>

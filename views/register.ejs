@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="loginstyles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Welcome To BKShop</h1>
+      <h1>Pls REGISTER Your Account.</h1>
+      <% if (messages) { %>
+      <p><%= messages.error %></p>
+      <% } %>
+      <form action="/register" method="POST">
+        <input type="name" name="name" placeholder="My Name" />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+        />
+        <input type="password" name="password" placeholder="* * * * * *" />
+        <p class="login-register-text">Have an account? <a href="/login">Login Here</a>.</p>
+        <button>REGISTER</button>
+      </form>
+    </div>
+  </body>
+</html>

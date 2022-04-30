@@ -1,0 +1,29 @@
+const app = Vue.createApp({
+    data(){
+        return{
+            icon:'/img/Icon.png',
+            banner1:'/img/banner.png',
+            banner2:'/img/banner02.png',
+            eng2b:'/img/ENG2B.jpg',
+            bootstrap:'/img/Bootstrap.jpg',
+            batabases:'/img/Databases.jpg',
+            iconuser:'/img/usericon.png',
+            shopping:'/img/shopping.png',
+            team:'/img/Teambook.jpg',
+            CB:'/img/CB.jpg',
+            githubicon:'/img/github.png',
+            wall:'/img/wall.jpg',
+            Book:'/img/Book.gif',
+            A1:'/img/A1.jpg',
+            A2:'/img/A2.jpg',
+            A3:'/img/A3.jpg',
+            A4:'/img/A4.jpg',
+            A5:'/img/A5.jpg',
+            T1:'/img/T1.jpg',
+            T2:'/img/T2.jpg',
+            T3:'/img/T3.jpg',
+            T4:'/img/T4.jpg',
+            T5:'/img/T5.jpg'
+        }
+    }
+})

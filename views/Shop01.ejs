@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>BKStore learning book</title>
+</head>
+<body>
+    <div id="app">
+        <form action="/logout?_method=DELETE" method="post">
+            <a href="/"><img :src="icon" class="img02"></a>
+            <a href="/"><img :src="Book" class="imgBook" style="width:3.5%"></a>
+            <a href="/buy"><img :src="shopping" class="img03" align="right" style="width:2%"></a>
+            <button type="submit" class="button2" style="float:right;">LOGOUT</button>
+        </form>
+        <div class="slider">
+            <div class="slides">
+                <!---radio buttons-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <!--Slide-->
+                <div class = "slide first">
+                    <img :src="banner1" alt="">
+                </div>
+                <div class="slide">
+                    <img :src="banner2" alt="">
+                </div>
+                <!--auto-->
+                <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                </div>
+            </div>
+            <!--manual-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var content =1;
+            setInterval(function(){
+                document.getElementById('radio' + content).checked = true;
+                content++
+                if(content > 2){
+                    content = 1;
+                }
+            },5000);
+        </script>
+    <nav class="mau">
+        <table class="table1">
+            <td class="td1"><a class="am" href="/">หน้าแรก</a></td><td class="td1"><a class="am" href="/shop02">หนังสื่อความรู้</a></td>
+            <td class="td2"><input type="search" class="select1" placeholder="Search..."><button class="button1">Search</button></td>
+        </table>
+    </nav>
+    <table align="center">
+        <h1>หนังสื่อรายวิชาแนะนำ: </h1> 
+    <td>
+    <div class="card">
+        <img :src="eng2b" style="width:40%">
+        <h2>EngLish Firsthand 2B</h2>
+        <p class="price">150 B</p>
+        <p>หนังสื่อเรียนวิชา english conversation</p>
+        <p><button>Add to Cart</button></p>
+    </td>
+        <td>
+            <div class="card">
+                <img :src="A1" style="width:40%">
+                <h2>Probiotics</h2>
+                <p class="price">150 B</p>
+                <p>หนังสือรายวิชา โพรไบโอติก</p>
+                <p><button>Add to Cart</button></p> 
+        </td>
+        <td>
+            <div class="card">
+                <img :src="A2" style="width:40%">
+                <h2>การควบคุมต้นทุน</h2>
+                <p class="price">250 B</p>
+                <p>หนังสือรายวิชา การควบคุมต้นทุน</p>
+                <p><button>Add to Cart</button></p> 
+        </td>
+        <td>
+            <div class="card">
+                <img :src="A3" style="width:40%">
+                <h2>Network Programming</h2>
+                <p class="price">100 B</p>
+                <p>หนังสือรายวิชา Network Programming</p>
+                <p><button>Add to Cart</button></p> 
+        </td>
+        <td>
+            <div class="card">
+                <img :src="A4" style="width:40%">
+                <h2>ทฤษฎีสถิติ 1</h2>
+                <p class="price">150 B</p>
+                <p>หนังสือรายวิชา ทฤษฎีสถิติ 1</p>
+                <p><button>Add to Cart</button></p> 
+        </td>
+      </div>
+    </table>
+    <table align="center" ><td>
+        <div class="card">
+            <img :src="A5" style="width:40%">
+            <h2>Computer Programming</h2>
+            <p class="price">200 B</p>
+            <p>หนังสือรายวิชา การโปรแกรมคอมพิวเตอร์ </p>
+            <p><button>Add to Cart</button></p> 
+    </td>
+  </div>
+</table>
+    <div class="wrapper">
+        <a class="button2" href="https://github.com/Jaaame/Pro_js" target="_back">
+            <div class="icon"><img :src="githubicon"></div>
+            <span>GitHub</span>
+        </a>
+    </div>
+    </div>
+    <script src = "main.js"></script>
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+</html>
